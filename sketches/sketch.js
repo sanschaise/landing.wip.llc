@@ -13,7 +13,7 @@ function setup() {
 }
 
 let time = 0;
-let size = 12;
+let size = 10;
 let gap = 30;
 function draw() {
   time += 0.01;
@@ -24,7 +24,7 @@ function draw() {
 
   fill(255);
   text("WORK IN PROGRESS... LLC", 0, 5);
-  for (let i = 5; i < 20; i++) {
+  for (let i = 4; i < 20; i++) {
     rotate(time * time);
     // translate(sin(time * time) * (size * i), -cos(time * time) * (size * i));
     // text("WIP... LLC", 0, i * size);
