@@ -13,13 +13,14 @@ function setup() {
 }
 
 let time = 0;
-let size = 10;
+let size = 5;
 let gap = 30;
 function draw() {
   time += 0.01;
   fill(0, 200);
   rect(width / 2, height / 2, width, height);
   push();
+
   translate(width / 2, height / 2);
 
   fill(255);
@@ -28,8 +29,8 @@ function draw() {
     rotate(time * time);
     // translate(sin(time * time) * (size * i), -cos(time * time) * (size * i));
     // text("WIP... LLC", 0, i * size);
-    ellipse(i * gap, 0, size);
-    ellipse(i * -gap, 0, size);
+    ellipse(i * gap, 0, size + map(mouseX - mouseY, 0, width - height, 0, 40));
+    ellipse(i * -gap, 0, size + map(mouseX - mouseY, 0, width - height, 0, 40));
   }
 
   // fill(0);
