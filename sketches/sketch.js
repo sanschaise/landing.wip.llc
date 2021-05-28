@@ -7,20 +7,24 @@ function setup() {
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
+  background(0);
+  noStroke();
+  textSize(12);
 }
 
 let time = 0;
-let size = 10;
+let size = 12;
 let gap = 30;
 function draw() {
   time += 0.01;
-  background(0);
+  fill(0, 200);
+  rect(width / 2, height / 2, width, height);
   push();
   translate(width / 2, height / 2);
 
   fill(255);
   text("WORK IN PROGRESS... LLC", 0, 5);
-  for (let i = 4; i < 15; i++) {
+  for (let i = 5; i < 20; i++) {
     rotate(time * time);
     // translate(sin(time * time) * (size * i), -cos(time * time) * (size * i));
     // text("WIP... LLC", 0, i * size);
